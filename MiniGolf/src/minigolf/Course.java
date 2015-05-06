@@ -13,7 +13,7 @@ public class Course {
     
     public static String getName(){
         //This method returns the course name
-        String courseName = name;
+        String courseName = "name";
         return courseName;
     }
     
