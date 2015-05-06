@@ -7,30 +7,55 @@ package minigolf;
 
 import org.junit.*;
 import static org.junit.Assert.*;
+import java.util.*;
 
 /**
  *
  * @author Jason Kerby
  */
 public class TestClass {
-    
-    //this is just copying his example as a test.. compiler doesn't have any issues -Kerb
+
+    //TEST ROUND: scoreDetail LEGAL
     @Test
-    public void testScoreDetailLegalInput(){
+    public void scoreDetailLegal() {
         final int[] correctScores = {1, 2, 3, 4};
         final Round r = new Round();
-        int [] scores = r.scoreDetail();
+        int[] scores = r.scoreDetail();
         assertNotNull(scores);
         assertArrayEquals(correctScores, scores);
     }
-    
-    //tests an illegal score input? -Kerb
+
+    //TEST ROUND: scoreDetail ILLEGAL
     @Test
-    public void testScoreIllegalInput(){
+    public void scoreDetailIllegal() {
         final int[] illegalScores = {-1, -2, -3, -4};
         final Round r = new Round();
-        int [] scores = r.scoreDetail();
+        int[] scores = r.scoreDetail();
         assertNotNull(scores);
         assertArrayEquals(illegalScores, scores);
+    }
+    
+    //TEST ROUND: numOfHolesPlayed LEGAL
+    @Test
+    public void numberOfHolesPlayedLegal() {
+        
+    }
+    
+    //TEST ROUND: numOfHolesPlayed ILLEGAL
+    @Test
+    public void numberOfHolesPlayedIllegal(){
+        
+    }
+    
+    //TEST ROUND: enterScore LEGAL
+    @Test
+    public void enterScoreLegal(){
+        
+    }
+    
+    //TEST ROUND: enterScore ILLEGAL
+    @Test
+    public void enterScoreIllegal(){
+        
     }
 }
