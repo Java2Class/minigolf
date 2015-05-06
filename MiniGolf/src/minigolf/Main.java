@@ -5,11 +5,24 @@
  */
 package minigolf;
 
+import java.util.*;
+
 /**
  *
  * @author John Silvey
  */
 public class Main {
+    
+    List<String> courseList = new ArrayList<>();
+    List<String> roundList = new ArrayList<>();
+
+    public List<String> getCourseList() {
+        return courseList;
+    }
+
+    public List<String> getRoundList() {
+        return roundList;
+    }    
 
     /**
      * @param args the command line arguments
