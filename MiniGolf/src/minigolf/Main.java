@@ -27,4 +27,26 @@ public class Main {
         return round;
     }   
     
+    public static Round getRound ( String player, String courseName ){
+        //This method looks up a round object
+        Round getRound = new Round();
+        return getRound;
+    }
+    
+    public static Course getCourse ( String courseName ){
+        //This method returns a course object
+        Course course = new Course();
+        return course;
+    }
+    
+    public static int scoreSoFar ( String courseName, String playername ){
+        //This method returns the current score to the swipe station
+        int score = 0;
+        return score;
+    }
+    
+    public static void enterStrokes ( String courseName, String playerName, int strokes){
+        //This method is used to enter stroke count for each hole        
+    }    
+    
 }
