@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
  */
 public class TestClass {
     
-    //this is just copying his example as a test.. compiler doesn't have any issues
+    //this is just copying his example as a test.. compiler doesn't have any issues -Kerb
     @Test
     public void testScoreDetailLegalInput(){
         final int[] correctScores = {1, 2, 3, 4};
@@ -22,5 +22,15 @@ public class TestClass {
         int [] scores = r.scoreDetail();
         assertNotNull(scores);
         assertArrayEquals(correctScores, scores);
+    }
+    
+    //tests an illegal score input? -Kerb
+    @Test
+    public void testScoreIllegalInput(){
+        final int[] illegalScores = {-1, -2, -3, -4};
+        final Round r = new Round();
+        int [] scores = r.scoreDetail();
+        assertNotNull(scores);
+        assertArrayEquals(illegalScores, scores);
     }
 }
