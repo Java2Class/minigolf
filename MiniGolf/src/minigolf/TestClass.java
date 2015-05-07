@@ -38,7 +38,10 @@ public class TestClass {
     //TEST ROUND: numOfHolesPlayed LEGAL
     @Test
     public void numberOfHolesPlayedLegal() {
-        
+        final Round r = new Round();
+        int holes = r.numberOfHolesPlayed();
+        assertNotNull(holes);
+        assertTrue(!(holes < 0) && (holes < 18));
     }
     
     //TEST ROUND: numOfHolesPlayed ILLEGAL
