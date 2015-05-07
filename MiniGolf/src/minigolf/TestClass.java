@@ -56,12 +56,25 @@ public class TestClass {
     //TEST ROUND: enterScore LEGAL
     @Test
     public void enterScoreLegal(){
-        
+        final Round r = new Round();
+        final int[] strokes = {1,2,3,4,5,6,7,8,9,10};
+           for (int i = 0; i < strokes.length; i ++){
+               r.enterScore(strokes[i]);
+               assertNotNull(strokes[i]);
+               assertTrue(!(strokes[i] <= 0) && (strokes[i] > 10));
+           }
     }
     
     //TEST ROUND: enterScore ILLEGAL
     @Test
     public void enterScoreIllegal(){
+        final Round r = new Round();
+        final int[] strokes = {-4,-3,-2,-1,0,10,11,12,13};
+        for (int i = 0; i < strokes.length; i++){
+            r.enterScore(strokes[i]);
+            assertNull(strokes);
+            assertFalse(!(strokes[i] > 0) && (strokes[i] <= 10));
+        }
         
     }
 }
